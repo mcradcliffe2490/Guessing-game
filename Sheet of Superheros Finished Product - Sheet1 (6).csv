@@ -1,0 +1,33 @@
+Hero Name,Gender,Abilities,Morality,Group,Flight,Space,Strength,Human,Genius
+Iron Man,Male,No powers,Hero,Team,Yes,Yes,Yes,Yes,Yes
+Black Widow ,Female,No powers,Hero,Team,No,No,No,Yes,No
+Hulk ,Male,Powers,Hero,Team,No,Yes,Yes,Yes,No
+Captain America,Male,Powers,Hero,Team,No,No,Yes,Yes,No
+War Machine,Male,No powers,Hero,Team,Yes,No,Yes,Yes,No
+Vision,Male,Powers,Hero,Team,Yes,No,Yes,No,Yes
+Black Panther,Male,Powers,Hero,Team,No,No,Yes,Yes,Yes
+Hawkeye,Male,No powers,Hero,Team,No,No,No,Yes,No
+Falcon,Male,No powers,Hero,Team,Yes,No,No,Yes,No
+Scarlet Witch,Female,Powers,Hero,Team,Yes,No,No,Yes,No
+Winter Soldier,Male,No powers,Hero,Team,No,No,Yes,Yes,No
+Ant-Man,Male,No powers,Hero,Team,No,No,Yes,Yes,No
+Spiderman,Male,Powers,Hero,Team,No,Yes,Yes,Yes,Yes
+Thor ,Male,Powers,Hero,Team,Yes,Yes,Yes,No,No
+Doctor Strange,Male,Powers,Hero,Team,Yes,Yes,No,Yes,Yes
+Wolverine,Male,Powers,Hero,Team,No,No,No,Yes,No
+Galactus,Male,Powers,Villain,Independent,Yes,Yes,Yes,No,Yes
+Thanos,Male,Powers,Villain,Independent,No,Yes,Yes,No,Yes
+Gamora,Female,No powers,Hero,Team,No,Yes,No,No,No
+Okoye,Female,No powers,Hero,Team,No,No,No,Yes,Yes
+Human Torch,Male,Powers,Hero,Team,Yes,Yes,No,Yes,No
+Killmonger,Male,No powers,Villian,Independent,No,No,No,Yes,Yes
+The Thing,Male,Powers,Hero,Team,No,Yes,Yes,Yes,No
+Invisible Woman,Female,Powers,Hero,Team,No,Yes,No,Yes,No
+Mr. Fantastic,Male,Powers,Hero,Team,No,Yes,No,Yes,Yes
+Magneto,Male,Powers,Villain,Team,No,No,No,Yes,No
+Doctor Doom,Male,No powers,Villain,Independent,Yes,Yes,Yes,Yes,Yes
+Dr. Octopus,Male,No powers,Villain,Independent,No,No,No,Yes,Yes
+Green Goblin,Male,No powers,Villain,Independent,Yes,No,No,Yes,Yes
+Red Skull,Male,Powers,Villain,Independent,No,Yes,Yes,Yes,Yes
+Apocalypse,Male,Powers,Villain,Independent,Yes,Yes,Yes,No,Yes
+Loki,Male,Powers,Villain,Independent,No,Yes,No,No,Yes
