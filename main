@@ -1,0 +1,333 @@
+#marveList is the name of the list
+#code to check if a question in the dicionary has the answer we want0
+import csv
+import random
+
+
+def CreateHeroDict(header_row, data_row):
+    HeroDict = {}
+    for i in range(0, len(header_row), 1):
+        HeroDict[header_row[i]] = data_row[i]
+    return (HeroDict)
+
+
+def GetHeroList():
+    data = []
+    with open('Sheet of Superheros Finished Product - Sheet1 (6).csv', 'rb') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            # print(row)
+            data.append(row)
+    header_row = data[0]
+    data_row = data[2]
+
+    HeroList = []
+
+    for j in range(1, len(data), 1):
+        NewHeroDict = CreateHeroDict(header_row, data[j])
+        HeroList.append(NewHeroDict)
+    return HeroList
+
+
+HeroList = GetHeroList()
+
+#Function that aslk the actual question
+
+
+#Mycales Code Start
+def deleteFun(dictionaryName, answer, question):
+    #searches dictionary and deletes based on input
+
+    Eanswer = dictionaryName.get(question)
+    #print(Eanswer)
+    #print (dictionaryName, "Dictionary Name")
+    #print (dictionaryName.get("Gender") )
+    #print (Eanswer, "Eanswer")
+    #print (answer, "answer")
+    if Eanswer != answer:
+        del HeroList[i]
+        return True
+    else:
+        #print("fine")
+        return False
+    #print(dictionaryName)
+    #print(dictionaryName.keys())
+
+
+#Ask question and calls function to delete the
+#certain charachter
+
+dead = """\033[2;32;41m███████████████████████████████
+███████████████████████████████
+███████▀░░░░░░░░░░░░░░░▀███████
+█████▀░░██▌░░░░░░░░░▐██░░▀█████
+████▀░██████░░░░░░░██████░▀████
+███▀░████████░░░░░████████░▀███
+██░░██████████░░░██████████░░██
+██░███████████▌░▐███████████░▐█
+█▌▐█████──▀███▌░▐███▀──█████▌▐█
+█▌▐█████▄──▐██░░░██───▄█████▌▐█
+█▌░██████████░░░░░██████████░▐█
+█▌░░████████░░░░░░░████████░░▐█
+█▌░░░░█████░░░░░░░░░█████░░░░▐█
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+███░░░░░░░░░░░░░░░░░░░░░░░░░███
+████░░░█▄░░░░░░░░░░░░░▄█░░░████
+█████░░░▀█████████████▀░░░█████
+██████░░░░░░░░░░░░░░░░░░░██████
+███████▄░░░░░░░░░░░░░░░▄███████\033[m"""
+
+dead2="""\033[2;32;41m███████████████████████████████
+███████████████████████████████
+███████▀░░░░░░░░░░░░░░░▀███████
+█████▀░░██▌░░░░░░░░░▐██░░▀█████
+████▀░██████░░░░░░░██████░▀████
+███▀░████████░░░░░████████░▀███
+██░░██████████░░░██████████░░██
+██░███████████▌░▐███████████░▐█
+█▌▐█████──▀███▌░▐███▀──█████▌▐█
+█▌▐█████▄──▐██░░░██───▄█████▌▐█
+█▌░██████████░░░░░██████████░▐█
+█▌░░████████░░░░░░░████████░░▐█
+█▌░░░░█████░░░░░░░░░█████░░░░▐█
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+███░░░░█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█░░░░███
+████░░░█▄─────────────▄█░░░████
+█████░░░▀█████████████▀░░░█████
+██████░░░░░░░░░░░░░░░░░░░██████
+███████▄░░░░░░░░░░░░░░░▄███████
+███████████████████████████████
+\033[m"""
+
+dead3="""\033[2;32;41m███████████████████████████████
+███████████████████████████████
+███████▀░░░░░░░░░░░░░░░▀███████
+█████▀░░██▌░░░░░░░░░▐██░░▀█████
+████▀░██████░░░░░░░██████░▀████
+███▀░████████░░░░░████████░▀███
+██░░██████████░░░██████████░░██
+██░███████████▌░▐███████████░▐█
+█▌▐█████──▀███▌░▐███▀──█████▌▐█
+█▌▐█████▄──▐██░░░██───▄█████▌▐█
+█▌░██████████░░░░░██████████░▐█
+█▌░░████████░░░░░░░████████░░▐█
+█▌░░░░█████░░░░░░░░░█████░░░░▐█
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+███░░░░░▄█████████████▄░░░░░███
+████░░░█████████████████░░░████
+█████░░███▀▀▀▀▀▀▀▀▀▀▀███░░█████
+██████░▀░░░░░░░░░░░░░░░▀░██████
+███████▄░░░░░░░░░░░░░░░▄███████
+███████████████████████████████
+\033[m"""
+
+dead4="""\033[2;32;41m███████████████████████████████
+███████████████████████████████
+███████▀░░░░░░░░░░░░░░░▀███████
+█████▀░░██▌░░░░░░░░░▐██░░▀█████
+████▀░██████░░░░░░░██████░▀████
+███▀░████████░░░░░████████░▀███
+██░░██████████░░░██████████░░██
+██░██▀─▀█▀─▀██▌░▐██▀─▀█▀─▀██░▐█
+█▌▐██▄─────▄██▌░▐██▄─────▄██▌▐█
+█▌▐████▄─▄████░░░████▄─▄████▌▐█
+█▌░██████████░░░░░██████████░▐█
+█▌░░████████░░░░░░░████████░░▐█
+█▌░░░░█████░░░░░░░░░█████░░░░▐█
+██░░░░░░░░░░░░░░░░░░░░░░░░░░░██
+███░░░░█████████████████░░░░███
+████░░░█████████████████░░░████
+█████░░░▀█████████████▀░░░█████
+██████░░░░░░░░░░░░░░░░░░░██████
+███████▄░░░░░░░░░░░░░░░▄███████
+███████████████████████████████
+\033[m"""
+
+deadN="""
+________                     .___                    .__   
+\______ \   ____ _____     __| _/_____   ____   ____ |  |  
+ |    |  \_/ __ \\__  \   / __ |\____ \ /  _ \ /  _ \|  |  
+ |    `   \  ___/ / __ \_/ /_/ ||  |_> >  <_> |  <_> )  |__
+/_______  /\___  >____  /\____ ||   __/ \____/ \____/|____/
+        \/     \/     \/      \/|__|                      """
+
+print(dead)
+print("Hiya! Welcome to my game! I'm..." + deadN + "\n and yes I am in your computer. We're gonna see If I can guess some of your favorite heroes(within limits) from the Marvel Universe. When your ready, pick a hero from the list and answer my questions!")
+
+for i in range(0, len(HeroList), 1):
+    print(HeroList[i].get("Hero Name"))
+
+firstAnswer = raw_input("Is it a Boy or Girl(Male/Female)")
+i = 0
+
+#firstAnswer error code
+while not (firstAnswer == "Male" or firstAnswer == "Female"):
+    print "EXACT spelling dummy"
+    firstAnswer = raw_input("Is it a Boy or Girl(Male/Female)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], firstAnswer, "Gender")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#------------------------------------
+
+secondAnswer = raw_input("Do they have powers?(Powers/No powers)")
+i = 0
+
+#firstAnswer error code
+while not (secondAnswer == "Powers" or secondAnswer == "No powers"):
+    print "Cmon buddy you should know the drill by know"
+    secondAnswer = raw_input("Do they have powers?(Powers/No powers)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], secondAnswer, "Abilities")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#------------------------------------
+
+thirdAnswer = raw_input("Are they a Hero or a Villain? (Hero/Villain)")
+i = 0
+
+#firstAnswer error code
+while not (thirdAnswer == "Hero" or thirdAnswer == "Villain"):
+    print "exact spelling dummy"
+    secondAnswer = raw_input("Are they a Hero or a Villain? (Hero/Villain)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], thirdAnswer, "Morality")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#------------------------------------
+fourthAnswer = raw_input("Are they in a team or group?(Team/Independent)")
+i = 0
+
+#firstAnswer error code
+while not (fourthAnswer == "Team" or fourthAnswer == "Independent"):
+    print "exact spelling DUM DUMB"
+    fourthAnswer = raw_input("Are they in a team or group?(Team/Independent)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], fourthAnswer, "Group")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#-------------------------------------
+fifthAnswer = raw_input("Can they fly?(Yes/No)")
+i = 0
+
+#firstAnswer error code
+while not (fifthAnswer == "Yes" or fifthAnswer == "No"):
+    print "I shouldn't have to tell you by now"
+    fifthAnswer = raw_input("Can they fly?(Yes/No)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], fifthAnswer, "Flight")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#-----------------------------------------
+sixthAnswer = raw_input("Do they travel to space?(Yes/No)")
+i = 0
+
+#firstAnswer error code
+while not (sixthAnswer == "Yes" or sixthAnswer == "No"):
+    print "YOU MAKE-A-ME SO MAD"
+    sixthAnswer = raw_input("Do they travel to space?(Yes/No)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], sixthAnswer, "Space")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#-----------------------------------------
+seventhAnswer = raw_input("Do they have super strength?(Yes/No)")
+i = 0
+
+#firstAnswer error code
+while not (seventhAnswer == "Yes" or seventhAnswer == "No"):
+    print " Im gonna throw a chimichanga full of chocolate at you, and we ALL know how chocolate stains"
+    seventhAnswer = raw_input("Do they have super strength?(Yes/No)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], seventhAnswer, "Strength")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#----------------------------------------
+eighthAnswer = raw_input("Are they human?(Yes/No)")
+i = 0
+
+#firstAnswer error code
+while not (eighthAnswer == "Yes" or eighthAnswer == "No"):
+    print "exact spelling dorkazoid"
+    eighthAnswer = raw_input("Are they human?(Yes/No)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], eighthAnswer, "Human")
+    if deleteState == False:
+        i += 1
+
+#for i in range(0, len(HeroList), 1):
+    #print(HeroList[i].get("Hero Name"))
+#----------------------------------------------
+ninthAnswer = raw_input("Are they a Genius?(Yes/No)")
+i = 0
+
+#firstAnswer error code
+while not (ninthAnswer == "Yes" or ninthAnswer == "No"):
+    print "exact spelling or ELSE "
+    ninthAnswer = raw_input("Are they a Genius?(Yes/No)")
+
+while (i < len(HeroList)):
+    #print("i" , i)
+    #print(len(HeroList), "HeroList")
+    deleteState = deleteFun(HeroList[i], ninthAnswer, "Genius")
+    if deleteState == False:
+        i += 1
+if (len(HeroList)==0):
+  print(dead3 + " Ummmmm, hey num nuts! You answered one of the questions wrong. Go back and do it AGAIN")
+else:
+  for i in range(0, len(HeroList), 1):
+      FinalAnswer=raw_input(dead2 + "Is THIS your charachter!: " + HeroList[i].get("Hero Name"))
+
+  while not (FinalAnswer == "Yes" or FinalAnswer == "No"):
+      print "THIS NEEDS TO STOP"
+      FinalAnswer = raw_input("Is THIS your charachter!: " + HeroList[i].get("Hero Name"))
+
+  if (FinalAnswer=="Yes"):
+   print(dead4 + "Yay I got it! Another win for the Chimichangas KING! Your'e welcome to play again if you want")
+  if (FinalAnswer=="No"):
+    print(dead3 + "HOW!? Man I thought I had you! RUN IT BACKKKKKK :(")
