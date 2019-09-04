@@ -34,7 +34,7 @@ HeroList = GetHeroList()
 #Function that aslk the actual question
 
 
-#Mycales Code Start
+#My Code Start
 def deleteFun(dictionaryName, answer, question):
     #searches dictionary and deletes based on input
 
